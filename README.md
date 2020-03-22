@@ -11,16 +11,15 @@
 - [Ansible Tutorial](https://github.com/frankietyrine/K-OSINT.iso#provisioning-with-ansible-playbook)
 - [SSH Tutorial](https://github.com/frankietyrine/K-OSINT.iso#Ssh)
 ![](https://raw.githubusercontent.com/frankietyrine/K-OSINT.iso/master/unnamed.png)
-## Build the ISO
-### steps:
-#### 1 Clone the live-build
+## Build a basic Kali ISO
+### 1 Clone the live-build
 ``` bash
 sudo apt update
 sudo apt install git live-build cdebootstrap devscripts -y
 git clone git://gitlab.com/kalilinux/build-scripts/live-build-config.git
 cd live-build-config
 ```
-#### 2 Select the packages [Full List](https://tools.kali.org/kali-metapackages)
+### 2 Select the packages [Full List](https://tools.kali.org/kali-metapackages)
 ***$vi*** ``` kali-config/variant-default/package-lists/kali.list.chroot```
 ```
 # You always want those
@@ -29,7 +28,7 @@ kali-linux-core
 # Graphical desktop
 kali-desktop-xfce
 ```
-#### 3 preseed.cfg [1](https://www.kali.org/dojo/preseed.cfg)
+### 3 preseed.cfg [1](https://www.kali.org/dojo/preseed.cfg)
 ***$vi*** ```kali-config/common/includes.binary/isolinux/install.cfg```
 ```
 label install
@@ -38,7 +37,7 @@ label install
     initrd /install/initrd.gz
     append vga=788 -- quiet file=/cdrom/install/preseed.cfg locale=en_US keymap=us hostname=kali domain=local.lan
 ```
-#### [Bonus] configure the booting color scheme
+### [Bonus] configure the booting color scheme
 - edit the theme.txt to personalize the booting theme
 
 
