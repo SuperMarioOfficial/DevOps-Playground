@@ -480,7 +480,7 @@ The following Ansible-specific terms are largely used throughout this guide
 - Role: a collection of playbooks and other files that are relevant to a goal such as installing a web server.
 - Play: a full Ansible run. A play can have several playbooks and roles, included from a single playbook that acts as entry point.
 
-#### Installing GoLang
+### Installing GoLang
 ```
 - name: install golang
   hosts: newinstance
@@ -552,7 +552,7 @@ The following Ansible-specific terms are largely used throughout this guide
       insertafter: EOF
       create: yes 
 ```
-#### Adding docker and aptitude
+### Adding docker and aptitude
 ```
 ---
 - hosts: all
@@ -600,7 +600,7 @@ The following Ansible-specific terms are largely used throughout this guide
       with_sequence: count={{ create_containers }}
 ```
 
-#### Update && Upgrade
+### Update && Upgrade
 ```
 - hosts: all
   become: true
@@ -615,7 +615,7 @@ The following Ansible-specific terms are largely used throughout this guide
       autoclean: yes
 
 ```
-#### Install packages [kali-metapackages](https://tools.kali.org/kali-metapackages)
+### Install packages [kali-metapackages](https://tools.kali.org/kali-metapackages)
 ```
   - name: install packages
     apt:
@@ -630,7 +630,7 @@ The following Ansible-specific terms are largely used throughout this guide
     
 ```
 
-#### clone from git [Documentation](https://docs.ansible.com/ansible/latest/modules/git_module.html)
+### clone from git [Documentation](https://docs.ansible.com/ansible/latest/modules/git_module.html)
 - [OSINT awesome git list](https://awesomeopensource.com/projects/osint)
 ```
 - name: clone repos
@@ -641,7 +641,37 @@ The following Ansible-specific terms are largely used throughout this guide
   become_method: sudo
 ```
 
+### Changing to zsh-shell [source](https://pablo.tools/posts/computers/custom-kali-box/)
+#### Download the shell
+```bash
+tasks:
+- name: Install missing packages
+  apt:
+    pkg:
+      - zsh
+    state: latest
+    update_cache: yes
+```
+#### Set the shell
+```bash
+- name: Set shell of user root to zsh
+  user:
+    name: root
+    shell: /bin/zsh
+```
 
+### Initialize metasploit [source](https://www.terasq.com/2019/03/building-kali-with-vagrant-ansible-p2/)
+```bash
+ - name: Initialize msfdb
+     shell: "{{ item }}"
+     with_items:
+     - "update-rc.d postgresql enable"
+     - "msfdb init"
+     - "touch /usr/share/metasploit-framework/.initialized"
+     args:
+       creates: "/usr/share/metasploit-framework/.initialized"
+       warn: false
+```
 
 - [pedantically_commented_playbook.yml/playbook.yml ](https://github.com/ogratwicklcs/pedantically_commented_playbook.yml/blob/master/playbook.yml)
 - [kali-playbook.yml](https://github.com/camjjack/vagrant-ctf/blob/master/kali-playbook.yml)
@@ -822,38 +852,6 @@ end
     ansible.install        = true
   end
 end
-```
-
-### Changing to zsh-shell [source](https://pablo.tools/posts/computers/custom-kali-box/)
-#### Download the shell
-```bash
-tasks:
-- name: Install missing packages
-  apt:
-    pkg:
-      - zsh
-    state: latest
-    update_cache: yes
-```
-#### Set the shell
-```bash
-- name: Set shell of user root to zsh
-  user:
-    name: root
-    shell: /bin/zsh
-```
-
-### Initialize metasploit [source](https://www.terasq.com/2019/03/building-kali-with-vagrant-ansible-p2/)
-```bash
- - name: Initialize msfdb
-     shell: "{{ item }}"
-     with_items:
-     - "update-rc.d postgresql enable"
-     - "msfdb init"
-     - "touch /usr/share/metasploit-framework/.initialized"
-     args:
-       creates: "/usr/share/metasploit-framework/.initialized"
-       warn: false
 ```
 
 ### References:
