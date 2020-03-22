@@ -616,28 +616,23 @@ The following Ansible-specific terms are largely used throughout this guide
       autoclean: yes
 
 ```
-#### Install packages
+#### Install packages [kali-metapackages](https://tools.kali.org/kali-metapackages)
 ```
   - name: install packages
     apt:
       name: "{{ packages }}"
     vars:
       packages:
-      - curl
-      - hydra
-      - nmap
-      - sqlmap
-      - john
-      - wireshark
-      - chromium-browser
+      - kali-tools-top10
+      - kali-tools-exploitation
+      - kali-tools-reverse-engineering
+      - kali-tools-passwords
+      - pwntools
+    
 ```
 
 #### clone from git [Documentation](https://docs.ansible.com/ansible/latest/modules/git_module.html)
-- https://github.com/s0md3v/Photon.git
-- https://github.com/sherlock-project/sherlock.git
-- https://github.com/jofpin/trape.git
-- https://github.com/michenriksen/gitrob.git
-- [more](https://awesomeopensource.com/projects/osint)
+- [OSINT awesome git list](https://awesomeopensource.com/projects/osint)
 ```
 - name: clone repos
 - git:
