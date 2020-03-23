@@ -19,8 +19,8 @@ sudo apt install git live-build cdebootstrap devscripts -y
 git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
 cd live-build-config
 ```
-### 2 Select the packages [Full List](https://tools.kali.org/kali-metapackages)
-***$vi*** ``` kali-config/variant-default/package-lists/kali.list.chroot```
+### Select the packages [Full List](https://tools.kali.org/kali-metapackages)
+***vi*** ``` kali-config/variant-default/package-lists/kali.list.chroot```
 ```
 # You always want those
 kali-linux-core
@@ -28,8 +28,15 @@ kali-linux-core
 # Graphical desktop
 kali-desktop-xfce
 ```
-### 3 preseed.cfg [1](https://www.kali.org/dojo/preseed.cfg)
-***$vi*** ```kali-config/common/includes.binary/isolinux/install.cfg```
+### ssh-enable
+```
+echo 'systemctl enable ssh' >>  kali-config/common/hooks/01-start-ssh.chroot
+chmod +x kali-config/common/hooks/01-start-ssh.chroot
+```
+### preseed.cfg 
+***vi*** ```kali-config/common/includes.binary/isolinux/install.cfg```
+***mkdir -p*** ```kali-config/common/debian-installer/```
+***wget -c*** ```https://raw.githubusercontent.com/cybern3tic/devops_notes/master/http/preseed.cfg```
 ```
 label install
     menu label ^Install Automated
@@ -82,7 +89,7 @@ Packer/
 - clipboard and drandrop modes: enabled
 - usb: enabled
 
-### Packer configuration file k-osint.json
+### Packer configuration file packer_config.json
 ```
 {
   "variables": {
