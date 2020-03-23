@@ -2,14 +2,6 @@
 
 # Kali Linux ISO + Packer + Ansible + Vagrant + Docker + Virtualbox + Vmware
 
-### Steps
-- [Steps](https://github.com/frankietyrine/K-OSINT.iso/blob/master/step-by-step.md)
-### Tutorials
-- [Vagrant Tutorial](https://github.com/frankietyrine/K-OSINT.iso#vagrant)
-- [Docker Tutorial](https://github.com/frankietyrine/K-OSINT.iso#docker)
-- [Packer Tutorial](https://github.com/frankietyrine/K-OSINT.iso#packer)
-- [Ansible Tutorial](https://github.com/frankietyrine/K-OSINT.iso#provisioning-with-ansible-playbook)
-- [SSH Tutorial](https://github.com/frankietyrine/K-OSINT.iso#Ssh)
 ![](https://raw.githubusercontent.com/frankietyrine/K-OSINT.iso/master/unnamed.png)
 ## Build a basic Kali ISO
 ### 1 Clone the live-build
