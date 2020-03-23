@@ -4,7 +4,7 @@
 
 ![](https://raw.githubusercontent.com/frankietyrine/K-OSINT.iso/master/unnamed.png)
 ## Build a basic Kali ISO
-### 1 Clone the live-build
+### Clone the live-build
 ``` bash
 sudo apt update
 sudo apt install git live-build cdebootstrap devscripts -y
@@ -20,15 +20,9 @@ kali-linux-core
 # Graphical desktop
 kali-desktop-xfce
 ```
-### ssh-enable
-```
-echo 'systemctl enable ssh' >>  kali-config/common/hooks/01-start-ssh.chroot
-chmod +x kali-config/common/hooks/01-start-ssh.chroot
-```
-### preseed.cfg 
+### next ... 
+#### create a install.cfg
 ***vi*** ```kali-config/common/includes.binary/isolinux/install.cfg```
-***mkdir -p*** ```kali-config/common/debian-installer/```
-***wget -c*** ```https://raw.githubusercontent.com/cybern3tic/devops_notes/master/http/preseed.cfg```
 ```
 label install
     menu label ^Install Automated
@@ -36,6 +30,10 @@ label install
     initrd /install/initrd.gz
     append vga=788 -- quiet file=/cdrom/install/preseed.cfg locale=en_US keymap=us hostname=kali domain=local.lan
 ```
+#### make dir
+***mkdir -p*** ```kali-config/common/debian-installer/```
+#### download preseed.cfg
+***wget -c*** ```https://raw.githubusercontent.com/cybern3tic/devops_notes/master/http/preseed.cfg```
 ### [Bonus] configure the booting color scheme
 - edit the theme.txt to personalize the booting theme
 
