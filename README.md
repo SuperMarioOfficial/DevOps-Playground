@@ -20,8 +20,7 @@ kali-linux-core
 # Graphical desktop
 kali-desktop-xfce
 ```
-### next ... 
-#### create a install.cfg
+### create a install.cfg
 ***vi*** ```kali-config/common/includes.binary/isolinux/install.cfg```
 ```
 label install
@@ -30,10 +29,9 @@ label install
     initrd /install/initrd.gz
     append vga=788 -- quiet file=/cdrom/install/preseed.cfg locale=en_US keymap=us hostname=kali domain=local.lan
 ```
-#### make dir
-***mkdir -p*** ```kali-config/common/debian-installer/```
-#### download preseed.cfg
-***wget -c*** ```https://raw.githubusercontent.com/cybern3tic/devops_notes/master/http/preseed.cfg```
+### ***mkdir -p*** ```kali-config/common/debian-installer/```
+### ***wget -c*** ```https://raw.githubusercontent.com/cybern3tic/devops_notes/master/http/preseed.cfg```
+
 ### [Bonus] configure the booting color scheme
 - edit the theme.txt to personalize the booting theme
 
