@@ -16,7 +16,7 @@
 ``` bash
 sudo apt update
 sudo apt install git live-build cdebootstrap devscripts -y
-git clone git://gitlab.com/kalilinux/build-scripts/live-build-config.git
+git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
 cd live-build-config
 ```
 ### 2 Select the packages [Full List](https://tools.kali.org/kali-metapackages)
