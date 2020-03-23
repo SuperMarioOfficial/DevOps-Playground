@@ -29,8 +29,10 @@ label install
     initrd /install/initrd.gz
     append vga=788 -- quiet file=/cdrom/install/preseed.cfg locale=en_US keymap=us hostname=kali domain=local.lan
 ```
-### ***mkdir -p*** ```kali-config/common/debian-installer/```
-### ***wget -c*** ```https://raw.githubusercontent.com/cybern3tic/devops_notes/master/http/preseed.cfg```
+### Final step
+***mkdir -p*** ```kali-config/common/debian-installer/```
+and then download the preseed
+***wget -c*** ```https://raw.githubusercontent.com/cybern3tic/devops_notes/master/http/preseed.cfg```
 
 ### [Bonus] configure the booting color scheme
 - edit the theme.txt to personalize the booting theme
