@@ -5,8 +5,8 @@ The VirtualBox Packer builder is able to create VirtualBox virtual machines and 
 ### Structure folder
 ```
 Packer/
-      |---k-osint.json
-      |---k-osint.iso
+      |---packer_cfg.json
+      |---kali_core.iso
       |---http/
       |       |--- preseed.cfg
       |---scripts/
@@ -25,20 +25,7 @@ Packer/
 - [stefco/geco_vm.json](https://github.com/stefco/geco_vm/tree/51b80576ed37fd8a53cac6e05db232c1bf1e6f70)
 - [xuxiaodong/.json](https://github.com/xuxiaodong/kvm-example/blob/df0bbad6b0071bdd29d83ad4a5ee965fcd71e819/archlinux-2020.02.01-amd64.json)
  
-### Machine specifications
-- Disk size: 80000 MB
-- RAM: 6000 MB
-- Graphic memory: 128M
-- CPU: 3
-- Audio: disabled
-- Network cards: 2
-- 3D Accelerated: enabled
-- clipboard and drandrop modes: enabled
-- usb: enabled
-
-### Notes packer configuration file
-#### variables:
-- W10, find SHA1 and SHA256
+## find SHA1 and SHA256 Windows
 ```
 certutil -hashfile k-osint.iso SHA1
 certutil -hashfile VBoxGuestAdditions.iso SHA256
@@ -46,17 +33,6 @@ certutil -hashfile VBoxGuestAdditions.iso SHA256
 #### boot_command:
 - ```/install/vmlinuz noapic``` it tells the [kernel](https://www.kernel.org/doc/html/v4.14/admin-guide/kernel-parameters.html) to not make use of any [IOAPICs](https://wiki.osdev.org/IOAPIC) that may be present in the system.
 #### provisioners:
-Be careful to set ssh username and password to the same username/password of the preceed or it won't work.
-- k-osint.json
-```
-"ssh_username": "vagrant",
-"ssh_password": "vagrant",
-```
-- preseed file 
-```
-d-i passwd/user-password password vagrant
-d-i passwd/user-password-again password vagrant
-```
 - Remember to provide the **sudo rights to your scripts**. Most of the examples echo <something>, that probably is not the right password, and if you are doing it for the first time it is easier to overlook that you are piping the wrong password.Although, a better way to do this is not to hardcode the password, but to echo the ssh_pass variable, lastly do not forget to add the ssh_password to the list of variables otherwise it will fail.
 ```
 "execute_command": "echo '{{user `ssh_password`}}' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
