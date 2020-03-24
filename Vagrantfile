@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "kosint"
+  config.vm.box = "kore"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -67,7 +67,8 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
-config.ssh.password = "kosint"
-config.ssh.username = "kosint"
+config.ssh.username = "mindwarelab"
+config.ssh.password = "mindwarelab"
+
 
 end
