@@ -1,3 +1,4 @@
+![](https://raw.githubusercontent.com/frankietyrine/K-OSINT.iso/master/unnamed.png)
 ## What is Packer?
 The VirtualBox Packer builder is able to create VirtualBox virtual machines and export them in the OVF format, starting from an ISO image. The builder builds a virtual machine by creating a new virtual machine from scratch, booting it, installing an OS, provisioning software within the OS, then shutting it down. The result of the VirtualBox builder is a directory containing all the files necessary to run the virtual machine portably. [To know more visit learn.hashicorp.com](https://learn.hashicorp.com/packer#operations-and-development)
 
@@ -34,3 +35,4 @@ Packer/
 - 3D Accelerated: enabled
 - clipboard and drandrop modes: enabled
 - usb: enabled
+![](https://raw.githubusercontent.com/frankietyrine/K-OSINT.iso/master/unnamed.png)
