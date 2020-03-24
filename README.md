@@ -26,4 +26,6 @@
 - Ansible, configure all the packages of the different version, and tor network, specifically, this is where you make the distro different from the base box. 
   - select the [Kali metapackages](https://tools.kali.org/kali-metapackages), less is better
   - clone the git repo you will need 
+  - install docker
+  - install k8
   - configure the whonix-tor network to surn anonymously
