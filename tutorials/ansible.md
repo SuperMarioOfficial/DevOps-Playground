@@ -1,8 +1,8 @@
 ## Provisioning with ansible playbook 
 Provisioning with Ansible allows you to seamlessly transition into configuration management, orchestration and application deployment using the same simple, human readable, automation language.
 - [ansible-basic-cheat-sheet](https://intellipaat.com/blog/tutorial/devops-tutorial/ansible-basic-cheat-sheet/)
-### commands 
-- To check the connectivity of hosts ```	#ansible <group> -m ping```
+### Basic commands 
+- To check the connectivity of hosts ```	#ansible all -m ping```
 - To reboot hosts	```#ansible all -a “/bin/reboot”```
 - To check the host system’s info	```#ansible all -m steup | less```
 - To transfer files	```#ansible all -m copy -a “src=home/ansible dest=/tmo/home”```
@@ -13,7 +13,7 @@ Provisioning with Ansible allows you to seamlessly transition into configuration
 - To check if a package is of a specific version ```#ansible all -m yum -a “name=httpd-1.8  state=latest”```
 - To check if a package is not installed ```#ansible all -m yum -a “name= httpd state= absent```
 - To start a service	```#ansible all -m service -a “name= httpd state=”started”```
-- To stop a service	```#ansible all - allm service -a “name= httpd state=”stopped”```
+- To stop a service	```#ansible all -m service -a “name= httpd state=”stopped”```
 - To restart a service	```#ansible all -m service -a “name= httpd state=”restarted”```
 
 ### Ansible Glossary
