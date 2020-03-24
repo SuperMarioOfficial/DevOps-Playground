@@ -1,14 +1,14 @@
 {
   "variables": {
-    "vm_name": "k-osint",
+    "vm_name": "kore",
     "disk_size": "80000",
-    "iso_checksum": "93ea9f00a60551412f20186cb7ba7d1ff3bebf73",
-    "iso_checksum_type": "sha1",
-    "iso_url": "k-osint.iso",
-    "box_name" : "k-osint", 
-    "ssh_username": "kosint",
-    "ssh_password": "kosint", 
-    "box_desc" : "Kali for OSINT distro "
+    "iso_checksum": "868e281eb7c5fb20967db2c44d1db42d0200850ce02296793559457e233ca1e4",
+    "iso_checksum_type": "sha256",
+    "iso_url": "kali_core.iso",
+    "box_name" : "kore", 
+    "ssh_username": "mindwarelab",
+    "ssh_password": "mindwarelab", 
+    "box_desc" : "Kali core, to be used as base for all the other configurations"
 
   },
   "description": "{{user `box_desc`}}",
@@ -26,8 +26,8 @@
       "http_directory": "http",
       "shutdown_command": "echo '{{user `ssh_password`}}' | sudo -S /sbin/shutdown -hP now",
       "communicator": "ssh",
-      "ssh_username": "kosint",
-      "ssh_password": "kosint", 
+      "ssh_username": "mindwarelab",
+      "ssh_password": "mindwarelab", 
       "ssh_port": 22,
       "ssh_wait_timeout": "60m",
       "guest_additions_mode": "disable",
@@ -65,7 +65,7 @@
     		{
       "type": "shell",
       "execute_command": "echo '{{user `ssh_password`}}' | {{ .Vars }} sudo -S -E sh -eux '{{ .Path }}'",
-      "scripts": [ "{{template_dir}}/scripts/cleanup.sh","{{template_dir}}/scripts/networking.sh"],
+      "scripts": ["{{template_dir}}/scripts/cleanup.sh"],
       "expect_disconnect": true
       }],
 
@@ -73,7 +73,7 @@
     {
 	
       	"type": "vagrant",
-  	"output": "k-osint-{{.Provider}}.box",
+  	"output": "kalicore-{{.Provider}}.box",
         "compression_level":9,
 	"keep_input_artifact": true
     }
