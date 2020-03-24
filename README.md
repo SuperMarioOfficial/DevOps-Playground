@@ -24,3 +24,6 @@
   - In case there is some issue ```vagrant destroy``` to reset everything. 
   - be careful to add the ssh username and password to the vagrant file if you do ```vagrant init``` this create a new file and it does not contain your ssh credentials
 - Ansible, configure all the packages of the different version, and tor network, specifically, this is where you make the distro different from the base box. 
+  - select the [Kali metapackages](https://tools.kali.org/kali-metapackages), less is better
+  - clone the git repo you will need 
+  - configure the whonix-tor network to surn anonymously
