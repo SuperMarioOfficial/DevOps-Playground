@@ -12,6 +12,8 @@
 - [Docker](https://github.com/cybern3tic/devops_notes/blob/master/tutorials/docker.md)
 - [FAQ](https://github.com/cybern3tic/devops_notes/blob/master/tutorials/FAQ.md)
 
+## username/password everywhere
+```mindwarelab```
 
 ## Steps to build your own Vagrant Box flavor
 - ISO creation keep it simple and follow the steps in [Build a new ISO](https://github.com/cybern3tic/devops_notes/blob/master/tutorials/build_new_iso.md)
