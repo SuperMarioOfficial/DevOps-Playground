@@ -5,9 +5,6 @@ Preseeding provides a way to set answers to questions asked during the installat
 ### When to use it: 
 I suggest you to use the bare minimum configuration and avoid to upgrade while installing the os. As explained before, packer will close and the vm will be destroyed if does not succeed 100%, if there is any connectivity issue during the installation, you could end up having to restart from the beginning. 
 
-### Pressed in the ISO
-Preseed is used to build the ISO too, and it is the same file. You can keep a bareminimum preseed configuration.
-
 ### Examples:
 - [/kalilinux/build-scripts/kali-vagrant/preseed.cfg](https://gitlab.com/kalilinux/build-scripts/kali-vagrant/-/blob/master/http/preseed.cfg)
 - [kalilinux/recipes/kali-preseed-examples/preseed.cfg](https://gitlab.com/kalilinux/recipes/kali-preseed-examples/-/blob/master/kali-linux-rolling-preseed.cfg)
