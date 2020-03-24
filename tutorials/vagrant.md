@@ -19,12 +19,13 @@
 config.ssh.password = "kosint"
 config.ssh.username = "kosint"
 ```
-- ```vagrant box add kosint k-osint-virtualbox.box --name kosint ```
-- ```vagrant init kosint ```
+- ``` vagrant init```
+	- add ssh credentials
+- ```vagrant box add kore kore-virtualbox.box --name kore ```
 - ```vagrant up ```
 
 ### Creating a VM
-    vagrant init <boxpath> -- Initialize Vagrant with a specific box. To find a box, go to the public Vagrant box catalog. When you find one you like, just replace it's name with boxpath. For example, vagrant init ubuntu/trusty64.
+```vagrant init <boxpath>``` -- Initialize Vagrant with a specific box. To find a box, go to the public Vagrant box catalog. When you find one you like, just replace it's name with boxpath. For example, ```vagrant init ubuntu/trusty64.```
 
 ### Starting a VM
 
