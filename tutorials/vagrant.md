@@ -1,16 +1,16 @@
 ## Vagrant
 [Vagrant cloud](https://app.vagrantup.com/boxes/search)
 
-## Basics: [source](https://linuxacademy.com/blog/linux/vagrant-cheat-sheet-get-started-with-vagrant/)
+## Basics Commands [source](https://linuxacademy.com/blog/linux/vagrant-cheat-sheet-get-started-with-vagrant/)
 - ```vagrant box add mindwarelab/<boxname> --provider virtualbox ```
 - ```vagrant init --minimal```
+	- or download my vagrantfile ```wget -c ```
 - ```vagrant up --provision ```
-- ```vagrant halt```
-- ```vagrant reload --provision```
 
-### Vagrant provision command
+## Vagrant provisioning commands
 - to find the name tpye ```vagrant global-status```
 	-```vagrant provision default```
+- ```vagrant reload --provision```
 	
 ### List of commands
 ```vagrant init <boxpath> -- Initialize Vagrant with a specific box. To find a box, go to the public Vagrant box catalog. When you find one you like, just replace it's name with boxpath. For example, vagrant init ubuntu/trusty64.
@@ -40,7 +40,6 @@
     vagrant up --provision | tee provision.log -- Runs vagrant up, forces provisioning and logs all output to a file
 ```
 
-### connect to ssh -X with Vagrant [run-graphical-programs-within-vagrantboxes](https://coderwall.com/p/ozhfva/run-graphical-programs-within-vagrantboxes)
 
 ### How to create a box from packer
 - The first thing to do to create a box with packer is to add these lines to packer json file. 
@@ -71,6 +70,7 @@ end
 - ```The SSH command responded with a non-zero exit status. ```
 	- https://askubuntu.com/questions/7477/how-can-i-add-a-new-user-as-sudoer-using-the-command-line
 	- ```sh -c "echo 'mindwarelab ALL=NOPASSWD: ALL' >> /etc/sudoers"```
+### connect to ssh -X with Vagrant [run-graphical-programs-within-vagrantboxes](https://coderwall.com/p/ozhfva/run-graphical-programs-within-vagrantboxes)
 
 ### References:
 - [vagrant-whonix-kali](https://github.com/j7k6/vagrant-whonix-kali/blob/master/Vagrantfile)
