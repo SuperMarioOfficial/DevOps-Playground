@@ -1,4 +1,6 @@
-![](https://raw.githubusercontent.com/frankietyrine/K-OSINT.iso/master/unnamed.png)
+![](https://raw.githubusercontent.com/frankietyrine/K-OSINT.iso/master/unnamed.png)\
+
+## ["The most beautiful flowers grow on the edge of the ravine"](http://www.achemenet.com/pdf/in-press/VAN-DER-SPEK_Cyrus_the_Great_Exiles_and_Foreign_Gods_June_2013.pdf) written on [Antiochus Cylinder](https://www.livius.org/sources/content/mesopotamian-chronicles-content/antiochus-cylinder/)
 
 # Tutorials: Kali Linux ISO + Packer + Ansible + Vagrant + Docker + Virtualbox + Vmware
 
