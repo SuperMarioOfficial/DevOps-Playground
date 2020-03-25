@@ -1,5 +1,4 @@
-## Vagrant
-[Vagrant cloud](https://app.vagrantup.com/boxes/search)
+# Vagrant
 
 ## Initialize your first box [source](https://linuxacademy.com/blog/linux/vagrant-cheat-sheet-get-started-with-vagrant/)
 - ```vagrant box add mindwarelab/<boxname> --provider virtualbox ```
@@ -86,5 +85,6 @@ end
 - [How To Ssh Into Linux Virtualbox](https://www.youtube.com/watch?v=ErzhbUusgdI)
 - [https://www.virtualbox.org/manual](https://www.virtualbox.org/manual/ch08.html)
 - [building-vagrant-machines-with-packer](https://www.gun.io/blog/building-vagrant-machines-with-packer)
+- [Vagrant cloud](https://app.vagrantup.com/boxes/search)
 
 ![](https://raw.githubusercontent.com/frankietyrine/K-OSINT.iso/master/unnamed.png)
