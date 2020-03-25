@@ -4,6 +4,7 @@ logz='cleanup.log'
 echo "##############################################################################"
 echo "# 02_Cleaning                                                                #"
 echo "##############################################################################"
+sudo apt-get clean -y
 
 echo "-----Delete residuals-----" | tee -a $logz
 dpkg -l | grep '^rc' | awk '{print $2}' | xargs dpkg --purge| tee -a $logz
@@ -34,11 +35,10 @@ rm -f /root/.wget-hsts | tee -a $logz
 echo "##############################################################################"
 echo "# 04_Others                                                                  #"
 echo "##############################################################################"
-apt-get -y -qq update 
+apt-get -y -qq update --fix-missing 
 apt-get install resolvconf
 apt-get install net-tools
 apt-get install openssh-server
-apt-get update --fix-missing 
 systemctl enable ssh
 systemctl enable ssh.service
 update-rc.d ssh defaults
@@ -46,3 +46,5 @@ systemctl enable ssh.socket
 PATH=/usr/bin:/usr/sbin
 echo "root:mindwarelab" | sudo chpasswd
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+
+cat /dev/null > ~/.bash_history && history -c && exit
