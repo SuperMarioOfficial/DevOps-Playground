@@ -1,3 +1,3 @@
 #!/bin/sh -eux
-apt update
-apt-get install ansible
+apt update -y
+apt-get install ansible -y
