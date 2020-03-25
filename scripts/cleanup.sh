@@ -30,6 +30,7 @@ rm -f /EMPTY | tee -a $logz
 
 echo "-----clear the history so our install isn't there-----" | tee -a $logz
 export HISTSIZE=0 | tee -a $logz
+unset HISTFILE
 rm -f /root/.wget-hsts | tee -a $logz
 
 echo "##############################################################################"
@@ -52,4 +53,4 @@ echo "root:mindwarelab" | sudo chpasswd
 sh -c "echo 'mindwarelab ALL=NOPASSWD: ALL' >> /etc/sudoers"
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
-cat /dev/null > ~/.bash_history && history -c && exit
+ln -s /dev/null ~/.bash_history && history -c && exit
