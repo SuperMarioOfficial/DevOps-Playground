@@ -1,7 +1,7 @@
 ## Vagrant
 [Vagrant cloud](https://app.vagrantup.com/boxes/search)
 
-## Basics Commands [source](https://linuxacademy.com/blog/linux/vagrant-cheat-sheet-get-started-with-vagrant/)
+## Initialize your first box [source](https://linuxacademy.com/blog/linux/vagrant-cheat-sheet-get-started-with-vagrant/)
 - ```vagrant box add mindwarelab/<boxname> --provider virtualbox ```
 - ```vagrant init --minimal```
 	- or download my vagrantfile ```wget -c ```
