@@ -11,6 +11,10 @@
 - to find the name type ```vagrant global-status```
 	- ```vagrant provision <name>```
 - ```vagrant reload --provision```
+
+## Repackage and distribute [source](https://www.abhishek-tiwari.com/creating-a-new-vagrant-base-box-from-an-existing-vm/)
+After you finished with the provisioning and installed everything you want to install on top of the base box. It is time to create a new box from it. 
+- ```vagrant package --base <base_vm_name> --output /myfolder/<new_box_name>.box```
 	
 ### List of commands
 ```vagrant init <boxpath> -- Initialize Vagrant with a specific box. To find a box, go to the public Vagrant box catalog. When you find one you like, just replace it's name with boxpath. For example, vagrant init ubuntu/trusty64.
