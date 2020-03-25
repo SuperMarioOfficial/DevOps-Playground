@@ -45,6 +45,7 @@ update-rc.d ssh defaults
 systemctl enable ssh.socket
 PATH=/usr/bin:/usr/sbin
 echo "root:mindwarelab" | sudo chpasswd
+sh -c "echo 'mindwarelab ALL=NOPASSWD: ALL' >> /etc/sudoers"
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
 cat /dev/null > ~/.bash_history && history -c && exit
