@@ -8,7 +8,7 @@
 - ```vagrant up --provision ```
 
 ## Vagrant provisioning commands
-- to find the name tpye ```vagrant global-status```
+- to find the name type ```vagrant global-status```
 	-```vagrant provision default```
 - ```vagrant reload --provision```
 	
