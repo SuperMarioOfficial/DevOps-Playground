@@ -68,17 +68,14 @@ end
 
 ### Errors: 
 - ```The SSH command responded with a non-zero exit status. ```
-	- https://askubuntu.com/questions/7477/how-can-i-add-a-new-user-as-sudoer-using-the-command-line
-	- ```sh -c "echo 'mindwarelab ALL=NOPASSWD: ALL' >> /etc/sudoers"```
+	- The solution is to add mindwarelab to sudoers [source](https://askubuntu.com/questions/7477/how-can-i-add-a-new-user-as-sudoer-using-the-command-line)
+	- ```sudo sh -c "echo 'mindwarelab ALL=NOPASSWD: ALL' >> /etc/sudoers"```
 ### connect to ssh -X with Vagrant [run-graphical-programs-within-vagrantboxes](https://coderwall.com/p/ozhfva/run-graphical-programs-within-vagrantboxes)
 
 ### References:
 - [vagrant-whonix-kali](https://github.com/j7k6/vagrant-whonix-kali/blob/master/Vagrantfile)
 - [vagrantfile/ssh_settings](https://www.vagrantup.com/docs/vagrantfile/ssh_settings.html)
 - [vagrant-provisioning-with-ansible](https://medium.com/@Joachim8675309/vagrant-provisioning-with-ansible-6dba6bca6290)
-- [ansible/inventory/virtualbox](https://docs.ansible.com/ansible/latest/plugins/inventory/virtualbox.html)
-- [ansible-dims-playbooks](https://ansible-dims-playbooks.readthedocs.io/en/latest/creatingvms.html)
-- [Ansible Playbooks for Beginners - Hands-On](https://www.youtube.com/watch?v=Z01b9QZG0D0)
 - [How To Ssh Into Linux Virtualbox](https://www.youtube.com/watch?v=ErzhbUusgdI)
 - [https://www.virtualbox.org/manual](https://www.virtualbox.org/manual/ch08.html)
 - [building-vagrant-machines-with-packer](https://www.gun.io/blog/building-vagrant-machines-with-packer)
