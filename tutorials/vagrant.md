@@ -9,7 +9,7 @@
 
 ## Vagrant provisioning commands
 - to find the name type ```vagrant global-status```
-	-```vagrant provision default```
+	- ```vagrant provision default```
 - ```vagrant reload --provision```
 	
 ### List of commands
