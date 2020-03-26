@@ -26,7 +26,6 @@ end
 
 # NEED TO BE TESTED
   
-  #config.vm.provision "shell", path: "https://raw.githubusercontent.com/cybern3tic/devops_tutorials/master/scripts/cleanup.sh"
 	#config.vm.provider :virtualbox do |vb|
 	#vb.customize 	["modifyvm",:id,"--memory","6000"]
 	#vb.customize 	["modifyvm",:id,"--vram","128"]
