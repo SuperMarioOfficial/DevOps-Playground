@@ -13,7 +13,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
      apt-get update -y && apt-get full-upgrade -y
      apt-get dist-upgrade --dry-run -y
-     apt-get install zsh -y
    SHELL
 
   config.vm.provision "shell", path: "https://raw.githubusercontent.com/SuperMarioOfficial/devops_tutorials/master/scripts/install_docker.sh"
