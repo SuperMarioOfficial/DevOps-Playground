@@ -23,6 +23,11 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", path: "https://raw.githubusercontent.com/cybern3tic/devops_tutorials/master/scripts/ansible_deb.sh"
   config.vm.provision "shell", path: "https://raw.githubusercontent.com/cybern3tic/devops_tutorials/master/scripts/tor.sh"
+
+	config.vm.provider :virtualbox do |vb|
+        vb.name = "base"
+    end
+
 end
   
   #config.vm.provision "shell", path: "https://raw.githubusercontent.com/cybern3tic/devops_tutorials/master/scripts/cleanup.sh"
