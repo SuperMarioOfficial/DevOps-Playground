@@ -43,8 +43,8 @@ apt-get install openssh-server
 systemctl enable ssh
 systemctl enable ssh.service
 systemctl start ssh
-systemctl enable sshd
-systemctl start sshd
+#systemctl enable sshd
+#systemctl start sshd
 update-rc.d ssh defaults
 systemctl enable ssh.socket
 PATH=/usr/bin:/usr/sbin
