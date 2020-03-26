@@ -8,7 +8,8 @@ sudo apt-get install \
     software-properties-common -y
     
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add - 
-
+sudo sed -i 's|docker.com/linux/debian|docker.com/linux/ubuntu|g' /etc/apt/sources.list
+sudo apt update
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 sudo apt update
 
