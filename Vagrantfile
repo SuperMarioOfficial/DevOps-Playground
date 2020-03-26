@@ -2,6 +2,9 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
+  config.vm.provider :virtualbox do |vb|
+        vb.name = "base"
+    end
   config.vm.box = "kore"
   config.vm.box_check_update = false
   config.ssh.username = "mindwarelab"
@@ -11,24 +14,17 @@ Vagrant.configure("2") do |config|
      apt-get update -y && apt-get full-upgrade -y
      apt-get dist-upgrade --dry-run -y
      apt-get install zsh -y
-	
-     export OSQUERY_KEY=1484120AC4E9F8A1A577AEEE97A80C63C9D8B80B
-     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $OSQUERY_KEY
-     apt-get install software-properties-common  -y
-     apt-get update  -y
-     add-apt-repository 'deb [arch=amd64] https://pkg.osquery.io/deb deb main'
-     apt-get update  -y
-     apt-get install osquery  -y
    SHELL
 
-  config.vm.provision "shell", path: "https://raw.githubusercontent.com/cybern3tic/devops_tutorials/master/scripts/ansible_deb.sh"
-  config.vm.provision "shell", path: "https://raw.githubusercontent.com/cybern3tic/devops_tutorials/master/scripts/tor.sh"
-
-	config.vm.provider :virtualbox do |vb|
-        vb.name = "base"
-    end
-
+  config.vm.provision "shell", path: "https://raw.githubusercontent.com/SuperMarioOfficial/devops_tutorials/master/scripts/install_docker.sh"
+  config.vm.provision "shell", path: "https://raw.githubusercontent.com/SuperMarioOfficial/devops_tutorials/master/scripts/install_ansible.sh"
+  config.vm.provision "shell", path: "https://raw.githubusercontent.com/SuperMarioOfficial/devops_tutorials/master/scripts/install_osquery.sh"
+  config.vm.provision "shell", path: "https://raw.githubusercontent.com/SuperMarioOfficial/devops_tutorials/master/scripts/tor.sh"
+  config.vm.provision "shell", path: "https://raw.githubusercontent.com/SuperMarioOfficial/devops_tutorials/master/scripts/cleanup.sh"
 end
+
+
+# NEED TO BE TESTED
   
   #config.vm.provision "shell", path: "https://raw.githubusercontent.com/cybern3tic/devops_tutorials/master/scripts/cleanup.sh"
 	#config.vm.provider :virtualbox do |vb|
