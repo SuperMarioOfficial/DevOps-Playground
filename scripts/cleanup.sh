@@ -44,7 +44,6 @@ systemctl enable ssh
 systemctl enable ssh.service
 systemctl start ssh
 systemctl enable sshd
-systemctl enable sshd.service 
 systemctl start sshd
 update-rc.d ssh defaults
 systemctl enable ssh.socket
