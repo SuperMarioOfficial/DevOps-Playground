@@ -25,8 +25,8 @@ echo "-----Blank netplan machine-id (DUID) so machines get unique ID generated o
 truncate -s 0 /etc/machine-id | tee -a $logz
 
 echo "-----Zero out the free space to save space in the final image-----" | tee -a $logz
-dd if=/dev/zero of=/EMPTY bs=1M || true | tee -a $logz
-rm -f /EMPTY | tee -a $logz
+#dd if=/dev/zero of=/EMPTY bs=1M || true | tee -a $logz
+#rm -f /EMPTY | tee -a $logz
 
 echo "-----clear the history so our install isn't there-----" | tee -a $logz
 export HISTSIZE=0 | tee -a $logz
