@@ -7,12 +7,9 @@ sudo apt-get install \
     gnupg2 -y\
     software-properties-common -y
     
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add - 
-add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/ $(lsb_release -cs)"
+wget -c https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/docker-ce_18.06.3~ce~3-0~debian_amd64.deb
+dpkg -i docker-ce_18.06.3~ce~3-0~debian_amd64.deb
 sudo apt update
-
-apt-get install docker-ce docker-ce-cli containerd.io -y
-
 systemctl start docker
 systemctl enable docker
 sudo usermod -aG docker $USER mindwarelab
