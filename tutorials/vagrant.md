@@ -3,7 +3,7 @@
 ## Initialize your first box [source](https://linuxacademy.com/blog/linux/vagrant-cheat-sheet-get-started-with-vagrant/)
 - ```vagrant box add mindwarelab/<boxname> --provider virtualbox ```
 - ```vagrant init --minimal```
-	- or download my vagrantfile ```wget -c ```
+	- or download my vagrantfile ```wget -c https://raw.githubusercontent.com/cybern3tic/devops_tutorials/master/Vagrantfile```
 - ```vagrant up --provision ```
 
 ## Vagrant provisioning commands
