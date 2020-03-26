@@ -15,6 +15,7 @@ systemctl enable ssh.socket
 PATH=/usr/bin:/usr/sbin
 echo "root:mindwarelab" | sudo chpasswd
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+sh -c "echo 'mindwarelab ALL=NOPASSWD: ALL' >> /etc/sudoers"
 
 echo "##############################################################################"
 echo "# Cleaning                                                                #" | tee -a $logz
