@@ -158,18 +158,13 @@ The following Ansible-specific terms are largely used throughout this guide
 
 ### Update && Upgrade
 ```
-- hosts: all
-  become: true
-    
-  tasks:
   - name: dist-upgrade
-    apt: 
-      upgrade: dist
-      update_cache: yes
-      purge: yes
-      autoremove: yes
-      autoclean: yes
-
+    apt:
+        upgrade: dist
+        update_cache: yes
+        purge: yes
+        autoremove: yes
+        autoclean: yes
 ```
 ### Install packages [kali-metapackages](https://tools.kali.org/kali-metapackages)
 ```
@@ -178,12 +173,10 @@ The following Ansible-specific terms are largely used throughout this guide
       name: "{{ packages }}"
     vars:
       packages:
-      - kali-tools-top10
-      - kali-tools-exploitation
-      - kali-tools-reverse-engineering
-      - kali-tools-passwords
-      - pwntools
-    
+      - python-pip
+      - python3-pip
+      - python3-setuptools 
+      - python3-wheel
 ```
 
 ### clone from git [Documentation](https://docs.ansible.com/ansible/latest/modules/git_module.html)
