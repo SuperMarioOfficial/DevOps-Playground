@@ -4,14 +4,6 @@
   become: true
     
   tasks:
-  - name: dist-upgrade
-    apt:
-        upgrade: dist
-        update_cache: yes
-        purge: yes
-        autoremove: yes
-        autoclean: yes
-
   - name: install packages
     apt:
       name: "{{ packages }}"
