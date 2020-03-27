@@ -1,15 +1,10 @@
-## Provisioning with ansible playbook 
+### Provisioning with ansible playbook 
 Provisioning with Ansible allows you to seamlessly transition into configuration management, orchestration and application deployment using the same simple, human readable, automation language.
 - [ansible-basic-cheat-sheet](https://intellipaat.com/blog/tutorial/devops-tutorial/ansible-basic-cheat-sheet/)
 
-### Ansible Glossary
-The following Ansible-specific terms are largely used throughout this guide
-- Control Machine / Node: a system where Ansible is installed and configured to connect and execute commands on nodes.
-- Node: a server controlled by Ansible.
-- Inventory File: a file that contains information about the servers Ansible controls, typically located at /etc/ansible/hosts.
-- Playbook: a file containing a series of tasks to be executed on a remote server.
-- Role: a collection of playbooks and other files that are relevant to a goal such as installing a web server.
-- Play: a full Ansible run. A play can have several playbooks and roles, included from a single playbook that acts as entry point.
+
+### Install ansible
+```apt-get install ansible -y```
 
 ### Basic commands 
 - To check the connectivity of hosts ```	#ansible all -m ping```
@@ -25,6 +20,20 @@ The following Ansible-specific terms are largely used throughout this guide
 - To start a service	```#ansible all -m service -a “name= httpd state=”started”```
 - To stop a service	```#ansible all -m service -a “name= httpd state=”stopped”```
 - To restart a service	```#ansible all -m service -a “name= httpd state=”restarted”```
+
+### Ansible Glossary
+The following Ansible-specific terms are largely used throughout this guide
+- Control Machine / Node: a system where Ansible is installed and configured to connect and execute commands on nodes.
+- Node: a server controlled by Ansible.
+- Inventory File: a file that contains information about the servers Ansible controls, typically located at /etc/ansible/hosts.
+- Playbook: a file containing a series of tasks to be executed on a remote server.
+- Role: a collection of playbooks and other files that are relevant to a goal such as installing a web server.
+- Play: a full Ansible run. A play can have several playbooks and roles, included from a single playbook that acts as entry point.
+
+### Playbook Examples
+- [pedantically_commented_playbook.yml/playbook.yml ](https://github.com/ogratwicklcs/pedantically_commented_playbook.yml/blob/master/playbook.yml)
+- [kali-playbook.yml](https://github.com/camjjack/vagrant-ctf/blob/master/kali-playbook.yml)
+- [kali-light/playbook.yml](https://gitlab.cylab.be/cylab/vagrant-boxes/blob/9abada07f232d9c50f90f94f9d33f9a90778ae19/kali-light/playbook.yml)
 
 ## Case studies
 ### Installing GoLang
@@ -219,10 +228,7 @@ tasks:
        creates: "/usr/share/metasploit-framework/.initialized"
        warn: false
 ```
-### Examples
-- [pedantically_commented_playbook.yml/playbook.yml ](https://github.com/ogratwicklcs/pedantically_commented_playbook.yml/blob/master/playbook.yml)
-- [kali-playbook.yml](https://github.com/camjjack/vagrant-ctf/blob/master/kali-playbook.yml)
-- [kali-light/playbook.yml](https://gitlab.cylab.be/cylab/vagrant-boxes/blob/9abada07f232d9c50f90f94f9d33f9a90778ae19/kali-light/playbook.yml)
+
 
 ### References:
 - [provision-multiple-machines-in-parallel-with-vagrant-and-ansible](https://martincarstenbach.wordpress.com/2019/04/11/ansible-tipsntricks-provision-multiple-machines-in-parallel-with-vagrant-and-ansible/)
