@@ -3,6 +3,10 @@
 "The most beautiful flowers grow on the edge of the ravine"[Source](http://www.achemenet.com/pdf/in-press/VAN-DER-SPEK_Cyrus_the_Great_Exiles_and_Foreign_Gods_June_2013.pdf) Babylon in 539 BCE [Antiochus Cylinder](https://www.livius.org/sources/content/mesopotamian-chronicles-content/antiochus-cylinder/)
 ### Keywords: Kali Linux ISO + Packer + Ansible + Vagrant + Docker + Virtualbox + Vmware
 
+## Basics
+- ```vagrant init mindwarelab/kore```
+- ```vagrant up```
+
 ## Steps to build your own Vagrant Box flavor
 ### Buil the ISO
 - [Build a new ISO](https://github.com/cybern3tic/devops_notes/blob/master/tutorials/build_new_iso.md)
@@ -14,11 +18,7 @@
 - [Ansible](https://github.com/cybern3tic/devops_notes/blob/master/tutorials/ansible.md)
 ### Enjoy!
 
-
-## username/password everywhere
-```mindwarelab```
-
-## Reference:
+## Chapters:
 - [Build a new ISO](https://github.com/cybern3tic/devops_notes/blob/master/tutorials/build_new_iso.md)
 - [Packer](https://github.com/cybern3tic/devops_notes/blob/master/tutorials/packer.md)
 - [Preseed](https://github.com/cybern3tic/devops_notes/blob/master/tutorials/preseed.md)
