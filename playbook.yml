@@ -1,0 +1,30 @@
+- 
+  name: Play 1
+  hosts: all
+  become: true
+    
+  tasks:
+  - name: dist-upgrade
+    apt:
+        upgrade: dist
+        update_cache: yes
+        purge: yes
+        autoremove: yes
+        autoclean: yes
+
+  - name: install packages
+    apt:
+      name: "{{ packages }}"
+    vars:
+      packages:
+      - python-pip
+      - python3-pip
+      - python3-setuptools 
+      - python3-wheel
+
+  - name: install pips
+    pip:
+      name: "{{pips}}"
+    vars:
+      pips:
+      - pwntools
