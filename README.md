@@ -17,7 +17,6 @@
 - [Vagrant](https://github.com/cybern3tic/devops_notes/blob/master/tutorials/vagrant.md)
 ### Configure Ansible playbook and update the machines
 - [Ansible](https://github.com/cybern3tic/devops_notes/blob/master/tutorials/ansible.md)
-### Enjoy!
 
 ## Chapters:
 - [Build a new ISO](https://github.com/cybern3tic/devops_notes/blob/master/tutorials/build_new_iso.md)
