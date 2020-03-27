@@ -32,8 +32,9 @@ The following Ansible-specific terms are largely used throughout this guide
 
 ### Playbook Examples
 - [pedantically_commented_playbook.yml/playbook.yml ](https://github.com/ogratwicklcs/pedantically_commented_playbook.yml/blob/master/playbook.yml)
-- [kali-playbook.yml](https://github.com/camjjack/vagrant-ctf/blob/master/kali-playbook.yml)
-- [kali-light/playbook.yml](https://gitlab.cylab.be/cylab/vagrant-boxes/blob/9abada07f232d9c50f90f94f9d33f9a90778ae19/kali-light/playbook.yml)
+- [cylab/kali-light/playbook.yml](https://gitlab.cylab.be/cylab/vagrant-boxes/blob/9abada07f232d9c50f90f94f9d33f9a90778ae19/kali-light/playbook.yml)
+- [camjjack/kali-playbook.yml](https://github.com/camjjack/vagrant-ctf/blob/master/kali-playbook.yml)
+- [NinjaStyle82/ansible-kali.yml](https://github.com/NinjaStyle82/ansible-kali/blob/master/ansible-kali.yml)
 
 ## Case studies
 ### Installing GoLang
