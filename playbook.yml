@@ -20,3 +20,10 @@
     vars:
       pips:
       - pwntools
+      
+  - name: gits
+    git:
+      name: "{{gits}}"
+    vars:
+      gits:
+      - 'https://github.com/s0md3v/Photon.git'
