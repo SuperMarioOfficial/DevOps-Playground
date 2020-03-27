@@ -18,7 +18,7 @@
 ### Configure Ansible playbook and update the machines
 - [Ansible](https://github.com/cybern3tic/devops_notes/blob/master/tutorials/ansible.md)
 
-## Chapters:
+## Index
 - [Build a new ISO](https://github.com/cybern3tic/devops_notes/blob/master/tutorials/build_new_iso.md)
 - [Packer](https://github.com/cybern3tic/devops_notes/blob/master/tutorials/packer.md)
 - [Preseed](https://github.com/cybern3tic/devops_notes/blob/master/tutorials/preseed.md)
