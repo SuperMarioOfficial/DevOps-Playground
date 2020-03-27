@@ -1,13 +1,5 @@
 ## Docker
 
-### [Install docker](https://medium.com/@airman604/installing-docker-in-kali-linux-2017-1-fbaa4d1447fe)
-- ```curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add```
-- ```echo 'deb [arch=amd64] https://download.docker.com/linux/debian buster stable' | sudo tee /etc/apt/sources.list.d/docker.list```
-- ``` sudo apt-get update &&  sudo apt-get install docker-ce```
-- ``` sudo systemctl enable docker```
-- ```sudo usermod -aG docker $USER```
-- ``` sudo docker run hello-world```
-
 ### Docker file
 ```
 FROM Xubuntu 18.04.4 LTS
