@@ -1,10 +1,9 @@
 # Vagrant
 
 ## Initialize your first box [source](https://linuxacademy.com/blog/linux/vagrant-cheat-sheet-get-started-with-vagrant/)
-- ```vagrant init mindwarelab/kore --box-version 1.0 ```
+- ```vagrant init mindwarelab/kore --box-version 1.0 --minimal```
 	- ```vagrant up```
 - ```vagrant box add mindwarelab/<boxname> --provider virtualbox ``` or ```vagrant box add <local_box_name> --provider virtualbox --name <some_name>```
-	- ```vagrant init --minimal```
 	- ```wget -c https://raw.githubusercontent.com/cybern3tic/devops_tutorials/master/Vagrantfile```
 	- ```vagrant up --provision ```
 
