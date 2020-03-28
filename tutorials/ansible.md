@@ -185,10 +185,8 @@ The following Ansible-specific terms are largely used throughout this guide
 ```
 - name: clone repos
 - git:
-    	repo: 'https://github.com/s0md3v/Photon.git'
-    	dest: ~/Desktop/Photon
-  become: yes
-  become_method: sudo
+    	repo: "https://github.com/SuperMarioOfficial/Build-your-own-vagrant.box.git"
+    	dest: ~/Desktop
 ```
 
 ### Changing to zsh-shell [source](https://pablo.tools/posts/computers/custom-kali-box/)
