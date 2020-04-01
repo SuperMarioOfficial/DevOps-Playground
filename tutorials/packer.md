@@ -51,7 +51,7 @@ certutil -hashfile VBoxGuestAdditions.iso SHA256
 - [bento/packer_templates](https://github.com/chef/bento/tree/master/packer_templates)
 - [Automated Install Kali Linux (Packer) youtube](https://www.youtube.com/watch?v=uDLC2JMCLek)
 - [packer.io/docs/templates/provisioners](https://packer.io/docs/templates/provisioners.html)
-- - [gwagner/packer-centos/virtualbox-guest-additions.sh](https://github.com/gwagner/packer-centos/blob/master/provisioners/install-virtualbox-guest-additions.sh)
+- [gwagner/packer-centos/virtualbox-guest-additions.sh](https://github.com/gwagner/packer-centos/blob/master/provisioners/install-virtualbox-guest-additions.sh)
 - [riywo/packer-example/virtualbox.sh](https://github.com/riywo/packer-example/blob/master/scripts/virtualbox.sh)
 - [run provisioner on specidfic build ](https://packer.io/docs/templates/provisioners.html)
 - [how-to-use-packer-to-create-ubuntu-18-04-vagrant-boxes](https://www.serverlab.ca/tutorials/dev-ops/automation/how-to-use-packer-to-create-ubuntu-18-04-vagrant-boxes/)
