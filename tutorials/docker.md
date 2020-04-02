@@ -1,16 +1,16 @@
 ![](https://raw.githubusercontent.com/frankietyrine/K-OSINT.iso/master/unnamed.png)
 # Docker
 #### Basics Points
-Installation and Configuration: Linux 
-Docker Hub Basics
-Docker Images
-The Dockerfile
-Running Containers
-The Container Lifecycle
-Image and Container Management
-Redirection: Docker Container Ports
-Redirection: Docker Container Volumes
-
+- how to Install and configure Docker on Linux? 
+- How to create Docker Images?
+- How to create a Dockerfile?
+- How to run containers?
+- What is the container Lifecycle?
+- Image and Container Management
+- How to redirect/map Docker cotainer to a specific port on the host? 
+- How to redirect Docker container to a specific volume?
+- How to use volumes for persistent storage?
+- How to tag? 
 
 ## References
 #### Youtube videos
