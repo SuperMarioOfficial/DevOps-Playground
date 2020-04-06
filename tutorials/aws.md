@@ -9,7 +9,7 @@ There are three types of EC2 instances:
 There are two type of storages:
 - persistent storage -> separate harddisk not connected with the instance or host
 - ephemeral storage -> work like the RAM of a computer 
-#### Packer and AMI -> autobuild and configure
+#### Packer and AMI -> create AMI instances from a configuration file
 - [Building custom AMI using Packer.io](https://medium.com/@sanudatta11/building-custom-ami-using-packer-io-5df55f32ebbb)
 #### Vagrant and AMI -> from/to vagrant boxes
 - [Using Vagrant with AWS](https://blog.scottlowe.org/2016/09/15/using-vagrant-with-aws/)
