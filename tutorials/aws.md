@@ -9,12 +9,12 @@ There are three types of EC2 instances:
 There are two type of storages:
 - persistent storage -> separate harddisk not connected with the instance or host
 - ephemeral storage -> work like the RAM of a computer 
-#### Packer and AMI
+#### Packer and AMI -> autobuild and configure
 - [Building custom AMI using Packer.io](https://medium.com/@sanudatta11/building-custom-ami-using-packer-io-5df55f32ebbb)
-#### Vagrant and AMI 
+#### Vagrant and AMI -> from/to vagrant boxes
 - [Using Vagrant with AWS](https://blog.scottlowe.org/2016/09/15/using-vagrant-with-aws/)
 - [Deploy vagrant boxes on EC2](https://www.tothenew.com/blog/using-vagrant-to-deploy-aws-ec2-instances/)
-#### Ansible and AMI
+#### Ansible and AMI -> provisioning instances
 - [Use Ansible to build and manage AWS EC2 instances](https://www.linuxschoolonline.com/use-ansible-to-build-and-manage-aws-ec2-instances/)
 - [Getting Started with Ansible and Dynamic Amazon EC2 Inventory Management](https://aws.amazon.com/blogs/apn/getting-started-with-ansible-and-dynamic-amazon-ec2-inventory-management/)
 ## ECS - Amazon Elastic Container Service 
