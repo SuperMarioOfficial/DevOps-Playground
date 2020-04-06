@@ -4,13 +4,46 @@
 - how to Install and configure Docker on Linux? 
 - How to create Docker Images?
 - How to create a Dockerfile?
+```
+FROM scratch   #an explicitly empty image, especially for building images "FROM scratch". It contains only a single binary.
+COPY hello /   #copy hello bynary in the root directory in the docker container
+CMD ["/hello"] #execute the bynary 
+```
 - How to run containers?
 - What is the container Lifecycle?
 - Image and Container Management
 - How to redirect/map Docker cotainer to a specific port on the host? 
+```
+FROM scratch
+COPY webapp /
+EXPOSE 8080
+CMD ["/webapp"]
+```
+  - curl <ip>:8080 
 - How to redirect Docker container to a specific volume?
-- How to use volumes for persistent storage?
+- How to use volumes for persistent storage? When do you use a volume? 
+  - bind mount to the host 
+  - volume 
+  - tmpfs temporary file system, live for the life of the container
 - How to tag? 
+ 
+#### Basic commands
+- build container ```docker build -t <tag name>```
+- run container ```docker run greetings```
+- tag image when you build it```docker -t greetings```
+- list all images ```docker images```
+- list all containers running ```docker ps -a ```
+- to remove an image by id ```docker rmi <id image>```
+- to remove a container by id ```docker rm <id container>
+- remove all images```docker container prune```
+- run bash command from inside the container ```docker run -it ubuntu /bin/bash```
+- convert a container in an image ```docker commit <id container> < name>```
+- run container in detach mode ``` docker run -d < name>```
+- inspect the json of the container ```docker insepct <id> ```
+- bind docker container port to any available port on the host in detach mode ```docker run -d -P <tag>```
+- bind docker container port to a specific port on the host in detach mode ```docker run -d -p <host port>:<container port> <tag>```
+- check networks ```docker network ls``` 
+- tag image ```docker tag <container name>:<tag name> <container name>:<new tag name> ```
 
 ## References
 #### Youtube videos
