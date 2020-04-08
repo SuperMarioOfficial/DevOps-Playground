@@ -56,5 +56,23 @@ CMD ["/webapp"]
 - [Learn Docker by Doing](https://linuxacademy.com/course/docker-and-container-orchestration-hands-orchestration-hands-on/)
 - [Docker Quick Start](https://linuxacademy.com/course/docker-quick-start/)
 
+#### Introduction
+- [Oreilly - Docker for the Absolute Beginner - Hands-On](https://learning.oreilly.com/videos/docker-for-the/9781788991315)
+- [Oreilly - Docker Essentials: The Definitive Guide to Docker Containerization](https://learning.oreilly.com/videos/docker-essentials-the/9781634625814)
+- [Oreilly - Docker Fundamentals](https://learning.oreilly.com/videos/docker-fundamentals/9781788399821)
+- [Oreilly - Effective DevOps and Development with Docker](https://learning.oreilly.com/videos/effective-devops-and/9781788994279)
+- [Oreilly - Docker, Dockerfile, and Docker-Compose](https://learning.oreilly.com/videos/docker-dockerfile-and/9781800206847)
+- [Cloudacademy - Introduction to Docker](https://cloudacademy.com/course/introduction-to-docker-2/results/?context_resource=lp&context_id=129)
+- [Cloudacademy - LAB Getting Started with Docker on Linux for AWS ](https://cloudacademy.com/lab/start-with-docker-linux-aws/?context_resource=lp&context_id=129)
+- [Oreilly - ]()
+- [Oreilly - ]()
 
+#### Intermediate
+- [Oreilly - Docker: Tips, Tricks, and Techniques with K8](https://learning.oreilly.com/videos/docker-tips-tricks/9781839217401)
+- [Cloudacademy - Managing Applications with Docker Compose](https://cloudacademy.com/course/managing-applications-with-docker-compose/anatomy-of-a-compose-file-1/?context_resource=lp&context_id=129)
+- [Oreilly - Docker in Action Video Edition](https://learning.oreilly.com/videos/docker-in-action/9781633430235VE)
+- [Oreilly - ]()
+- [Oreilly - ]()
+- [Oreilly - ]()
+- [Oreilly - ]()
 ![](https://raw.githubusercontent.com/frankietyrine/K-OSINT.iso/master/unnamed.png)
