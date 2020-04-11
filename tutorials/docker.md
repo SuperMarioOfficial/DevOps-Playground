@@ -1,33 +1,17 @@
 ![](https://raw.githubusercontent.com/frankietyrine/K-OSINT.iso/master/unnamed.png)
 # Docker
-#### Basics Points
-- how to Install and configure Docker on Linux? 
-- How to create Docker Images?
-- How to create a Dockerfile?
-```
-FROM scratch   #an explicitly empty image, especially for building images "FROM scratch". It contains only a single binary.
-COPY hello /   #copy hello bynary in the root directory in the docker container
-CMD ["/hello"] #execute the bynary 
-```
-- How to run containers?
-- What is the container Lifecycle?
-- Image and Container Management
-- How to redirect/map Docker cotainer to a specific port on the host? 
-```
-FROM scratch
-COPY webapp /
-EXPOSE 8080
-CMD ["/webapp"]
-```
-  - curl <ip>:8080 
-- How to redirect Docker container to a specific volume?
-- How to use volumes for persistent storage? When do you use a volume? 
-  - bind mount to the host 
-  - volume 
-  - tmpfs temporary file system, live for the life of the container
-- How to tag? 
- 
-#### Basic commands
+## Documentation
+### Installing
+sudo yum update
+sudo yum -y install docker
+sudo systemctl start docker 
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+newgrp docker
+docker info
+sudo systemctl restart docker
+
+### Basic commands
 - build container ```docker build -t <tag name>```
 - run container ```docker run greetings```
 - tag image when you build it```docker -t greetings```
@@ -36,7 +20,6 @@ CMD ["/webapp"]
 - to remove an image by id ```docker rmi <id image>```
 - to remove a container by id ```docker rm <id container>
 - remove all images```docker container prune```
-- run bash command from inside the container ```docker run -it ubuntu /bin/bash```
 - convert a container in an image ```docker commit <id container> < name>```
 - run container in detach mode ``` docker run -d < name>```
 - inspect the json of the container ```docker insepct <id> ```
@@ -44,6 +27,38 @@ CMD ["/webapp"]
 - bind docker container port to a specific port on the host in detach mode ```docker run -d -p <host port>:<container port> <tag>```
 - check networks ```docker network ls``` 
 - tag image ```docker tag <container name>:<tag name> <container name>:<new tag name> ```
+- run commands ```docker exec web-server ls /etc/nginx```
+- run bash command from inside the container ```docker run -it ubuntu /bin/bash```
+- stop a container ```docker stop web-server```
+- search for an image ```docker search "Microsoft .NET Core"```
+
+ 
+### How to create a Dockerfile?
+```
+FROM scratch   #an explicitly empty image, especially for building images "FROM scratch". It contains only a single binary.
+COPY hello /   #copy hello bynary in the root directory in the docker container
+CMD ["/hello"] #execute the bynary 
+```
+### How to redirect/map Docker cotainer to a specific port on the host? 
+```
+FROM scratch
+COPY webapp /
+EXPOSE 8080
+CMD ["/webapp"]
+```
+  - ```curl <ip>:8080 ```
+### How to redirect Docker container to a specific volume?
+### How to use volumes for persistent storage? When do you use a volume? 
+  - bind mount to the host 
+  - volume 
+  - tmpfs temporary file system, live for the life of the container
+
+### How to dockerize a git repository [source](https://developer.okta.com/blog/2018/09/27/test-your-github-repositories-with-docker-in-five-minutes)
+```
+docker run -p 3000:3000 -e github='https://github.com/pmcdowell-okta/dockertest.git' -it oktaadmin/dockertest
+```
+ 
+
 
 ## References
 #### Youtube videos
