@@ -2,15 +2,16 @@
 # Docker
 ## Documentation
 ### Installing
-sudo yum update
-sudo yum -y install docker
+```
+sudo apt update
+sudo apt -y install docker
 sudo systemctl start docker 
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 newgrp docker
 docker info
 sudo systemctl restart docker
-
+```
 ### Basic commands
 - build container ```docker build -t <tag name>```
 - run container ```docker run greetings```
@@ -46,7 +47,6 @@ COPY webapp /
 EXPOSE 8080
 CMD ["/webapp"]
 ```
-  - ```curl <ip>:8080 ```
 ### How to redirect Docker container to a specific volume?
 ### How to use volumes for persistent storage? When do you use a volume? 
   - bind mount to the host 
@@ -79,15 +79,11 @@ docker run -p 3000:3000 -e github='https://github.com/pmcdowell-okta/dockertest.
 - [Oreilly - Docker, Dockerfile, and Docker-Compose](https://learning.oreilly.com/videos/docker-dockerfile-and/9781800206847)
 - [Cloudacademy - Introduction to Docker](https://cloudacademy.com/course/introduction-to-docker-2/results/?context_resource=lp&context_id=129)
 - [Cloudacademy - LAB Getting Started with Docker on Linux for AWS ](https://cloudacademy.com/lab/start-with-docker-linux-aws/?context_resource=lp&context_id=129)
-- [Oreilly - ]()
-- [Oreilly - ]()
+
 
 #### Intermediate
 - [Oreilly - Docker: Tips, Tricks, and Techniques with K8](https://learning.oreilly.com/videos/docker-tips-tricks/9781839217401)
 - [Cloudacademy - Managing Applications with Docker Compose](https://cloudacademy.com/course/managing-applications-with-docker-compose/anatomy-of-a-compose-file-1/?context_resource=lp&context_id=129)
 - [Oreilly - Docker in Action Video Edition](https://learning.oreilly.com/videos/docker-in-action/9781633430235VE)
-- [Oreilly - ]()
-- [Oreilly - ]()
-- [Oreilly - ]()
-- [Oreilly - ]()
+
 ![](https://raw.githubusercontent.com/frankietyrine/K-OSINT.iso/master/unnamed.png)
