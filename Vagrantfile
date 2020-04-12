@@ -16,10 +16,10 @@ Vagrant.configure("2") do |config|
      apt-get install git -y
    SHELL
 
-  #config.vm.provision "shell", path: "https://raw.githubusercontent.com/SuperMarioOfficial/devops_tutorials/master/scripts/install_docker.sh"
-  #config.vm.provision "shell", path: "https://raw.githubusercontent.com/SuperMarioOfficial/devops_tutorials/master/scripts/install_ansible.sh"
-  #config.vm.provision "shell", path: "https://raw.githubusercontent.com/SuperMarioOfficial/devops_tutorials/master/scripts/install_osquery.sh"
-  #config.vm.provision "shell", path: "https://raw.githubusercontent.com/SuperMarioOfficial/devops_tutorials/master/scripts/tor.sh"
+  config.vm.provision "shell", path: "https://raw.githubusercontent.com/SuperMarioOfficial/devops_tutorials/master/scripts/install_docker.sh"
+  config.vm.provision "shell", path: "https://raw.githubusercontent.com/SuperMarioOfficial/devops_tutorials/master/scripts/install_ansible.sh"
+  config.vm.provision "shell", path: "https://raw.githubusercontent.com/SuperMarioOfficial/devops_tutorials/master/scripts/install_osquery.sh"
+  config.vm.provision "shell", path: "https://raw.githubusercontent.com/SuperMarioOfficial/devops_tutorials/master/scripts/tor.sh"
   config.vm.provision "shell", path: "https://raw.githubusercontent.com/SuperMarioOfficial/devops_tutorials/master/scripts/virtualbox.sh"
 
    config.vm.provision "ansible" do |ansible|
