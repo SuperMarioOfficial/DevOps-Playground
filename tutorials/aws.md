@@ -32,10 +32,10 @@ packer -> ansible
      }
  }],  
 
-   "provisioners": [
-    		{
-      "type": "shell",
-      "execute_command": "sudo update -y && sudo upgrade -y && sudo apt install ansible -y"
+    "type": "shell",
+      "execute_command": "echo '{{user `ssh_password`}}' | {{ .Vars }} sudo -S -E sh -eux '{{ .Path }}'",
+      "scripts": ["{{template_dir}}/scripts/ansible.sh"],
+      "expect_disconnect": true
       }]
 }
 ```
