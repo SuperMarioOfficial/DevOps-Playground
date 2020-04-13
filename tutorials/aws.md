@@ -38,8 +38,7 @@
 
 ## connect to the AWS instance
 ### Download from aws you pem file
-![](https://raw.githubusercontent.com/SuperMarioOfficial/Build-your-own-vagrant.box/master/tutorials/data/1.PNG)
-### Open a terminal
+### Connect with [SSH](https://github.com/SuperMarioOfficial/SSH)
 ![](https://raw.githubusercontent.com/SuperMarioOfficial/Build-your-own-vagrant.box/master/tutorials/data/2.PNG)
 ``` bash
 chmod 400 755485601581.pem
