@@ -36,8 +36,6 @@
 }
 ```
 
-## connect to the AWS instance
-### Download from aws you pem file
 ### Connect with [SSH](https://github.com/SuperMarioOfficial/SSH)
 ![](https://raw.githubusercontent.com/SuperMarioOfficial/Build-your-own-vagrant.box/master/tutorials/data/2.PNG)
 ``` bash
