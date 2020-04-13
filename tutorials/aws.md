@@ -1,8 +1,4 @@
-
-## Idea
-packer -> ansible
-
-### packer 
+### Deploy an AWS instance with packer 
 ```
 {
   "variables": {
@@ -40,7 +36,7 @@ packer -> ansible
 }
 ```
 
-## connect to an AWS instance
+## connect to the AWS instance
 ### Download from aws you pem file
 ![](https://raw.githubusercontent.com/SuperMarioOfficial/Build-your-own-vagrant.box/master/tutorials/data/1.PNG)
 ### Open a terminal
