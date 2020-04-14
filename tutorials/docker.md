@@ -89,6 +89,7 @@ FROM scratch   #an explicitly empty image, especially for building images "FROM 
 COPY hello /   #copy hello bynary in the root directory in the docker container
 CMD ["/hello"] #execute the bynary 
 ```
+- To build the executable ```docker container runv --rm -v ${PWD}:/src -w /src gcc:7.2 gcc -static -o hello hello.c```
 ### How to redirect/map Docker cotainer to a specific port on the host? 
 ```
 FROM scratch
