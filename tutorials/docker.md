@@ -12,8 +12,28 @@ newgrp docker
 docker info
 sudo systemctl restart docker
 ```
+
+### Namespaces 
+Each container has its own process numbering and form its own hierarchy. Containers have 2 processs one in the child namespace and another one in the parent namespace. 
+- **PID** ```ps aux | grep container```
+- **IPC** inter process communication namespace provides semaphore, message queues, and shared memory segments
+- **MNT** namespace processes in one mnt namespace cannot see the mounted filesytem of another mnt namespace
+- **UTS** namespace each container can have different hostnames 
+- **User** namespace normal host users can be root inside the containers
+
+### Cgroups 
+Control groups (cgroups) provide resoures limitations and accounting for containers. 
+On Ubuntu: ```apt-get install cgroup-tools```. On CentOS: ```yum install libcgroup libcgroup-tools```
+- ```lssubsys -M```
+- **resource limiting** bounding to specific CPUs
+- **prioritization** increase or decrease share of CPUs usage
+- **accounting** measure the performance of the group
+- **control** can start, freeze, restart a group
+
 ### Basic commands
-- build container ```docker build -t <tag name>```
+- pull container ``` docker pull kojikno/conda_docker```
+- push container ``` docker push kojikno/conda_docker:python3.7```
+- build container ```docker build -t <tag name>:latest```
 - run container ```docker run greetings```
 - tag image when you build it```docker -t greetings```
 - list all images ```docker images```
@@ -30,11 +50,40 @@ sudo systemctl restart docker
 - tag image ```docker tag <container name>:<tag name> <container name>:<new tag name> ```
 - run commands ```docker exec web-server ls /etc/nginx```
 - run bash command from inside the container ```docker run -it ubuntu /bin/bash```
+- start a container ```docker start container_id/container_name```
 - stop a container ```docker stop web-server```
 - search for an image ```docker search "Microsoft .NET Core"```
+- This command to attach local standard input, output, and error streams to a running container.```docker attach container_id/container_name```
+- This command allows us to exec another process in a running container. ```docker exec option container_id/container_name```
 
  
 ### How to create a Dockerfile?
+Dockerfile is a set of instructions for the docker engine to read and build a container accordint to the plan.
+```
+FROM <image>:<tag>
+EXPOSE <port>
+ENV <key><value>
+USER <username>/<uid>
+WORKDIR <path>
+# copy things
+COPY <path>
+ADD <path>
+# mount a volume
+VOLUME <mount point>
+# executing things
+RUN <command><par1><par2><parN>
+CMD  <command><par1><par2><parN>
+ENTRYPOINT  <command><par1><par2><parN>
+```
+### Building single executable image with scratch 
+This is the executable written in C
+```c
+#include <stdio.h>
+void main(){
+printf("Hello world\n");
+}
+```
+This is the docker image 
 ```
 FROM scratch   #an explicitly empty image, especially for building images "FROM scratch". It contains only a single binary.
 COPY hello /   #copy hello bynary in the root directory in the docker container
