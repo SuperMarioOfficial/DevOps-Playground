@@ -29,33 +29,6 @@ On Ubuntu: ```apt-get install cgroup-tools```. On CentOS: ```yum install libcgro
 - **prioritization** increase or decrease share of CPUs usage
 - **accounting** measure the performance of the group
 - **control** can start, freeze, restart a group
-
-### Basic commands
-- pull container ``` docker pull kojikno/conda_docker```
-- push container ``` docker push kojikno/conda_docker:python3.7```
-- build container ```docker build -t <tag name>:latest```
-- run container ```docker run greetings```
-- tag image when you build it```docker -t greetings```
-- list all images ```docker images```
-- list all containers running ```docker ps -a ```
-- to remove an image by id ```docker rmi <id image>```
-- to remove a container by id ```docker rm <id container>
-- remove all images```docker container prune```
-- convert a container in an image ```docker commit <id container> < name>```
-- run container in detach mode ``` docker run -d < name>```
-- inspect the json of the container ```docker insepct <id> ```
-- bind docker container port to any available port on the host in detach mode ```docker run -d -P <tag>```
-- bind docker container port to a specific port on the host in detach mode ```docker run -d -p <host port>:<container port> <tag>```
-- check networks ```docker network ls``` 
-- tag image ```docker tag <container name>:<tag name> <container name>:<new tag name> ```
-- run commands ```docker exec web-server ls /etc/nginx```
-- run bash command from inside the container ```docker run -it ubuntu /bin/bash```
-- start a container ```docker start container_id/container_name```
-- stop a container ```docker stop web-server```
-- search for an image ```docker search "Microsoft .NET Core"```
-- This command to attach local standard input, output, and error streams to a running container.```docker attach container_id/container_name```
-- This command allows us to exec another process in a running container. ```docker exec option container_id/container_name```
-
  
 ### How to create a Dockerfile?
 Dockerfile is a set of instructions for the docker engine to read and build a container accordint to the plan.
