@@ -7,11 +7,6 @@ echo "##########################################################################
 apt-get -y -qq update  --fix-missing 
 apt-get install resolvconf
 apt-get install net-tools
-apt-get install openssh-server
-systemctl enable ssh
-systemctl enable ssh.service
-update-rc.d ssh defaults
-systemctl enable ssh.socket
 PATH=/usr/bin:/usr/sbin
 echo "root:mindwarelab" | sudo chpasswd
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
