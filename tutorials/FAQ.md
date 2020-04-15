@@ -17,6 +17,7 @@
 - [How to change user password in multiple servers](https://www.2daygeek.com/linux-passwd-chpasswd-command-set-update-change-users-password-in-linux-using-shell-script/)
 - [How To Set Permanent DNS Nameservers in Ubuntu and Debian](https://www.tecmint.com/set-permanent-dns-nameservers-in-ubuntu-debian/)
 - [How do I set my DNS when resolv.conf is being overwritten?](https://unix.stackexchange.com/questions/128220/how-do-i-set-my-dns-when-resolv-conf-is-being-overwritten)
+- cannot find shutdown ```sudo /sbin/shutdown -r now```
 
 ### Virtualbox
 - [VirtualBox - how to increase video memory?](https://askubuntu.com/questions/587083/virtualbox-how-to-increase-video-memory)
