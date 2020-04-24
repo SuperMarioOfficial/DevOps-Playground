@@ -51,7 +51,4 @@
 
 ### Connect with [SSH](https://github.com/SuperMarioOfficial/SSH)
 ![](https://raw.githubusercontent.com/SuperMarioOfficial/Build-your-own-vagrant.box/master/tutorials/data/2.PNG)
-``` bash
-chmod 400 EUW.pem
-ssh -i "EUW.pem" ec2-user@ec2-54-201-70-167.eu-west-2.compute.amazonaws.com
-```
+
