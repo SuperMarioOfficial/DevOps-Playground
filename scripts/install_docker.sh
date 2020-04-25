@@ -1,19 +1,19 @@
 #!/bin/sh -eux
 
-sudo apt-get install \
+apt-get install \
     apt-transport-https -y \
     ca-certificates -y\
     curl -y\
     gnupg2 -y\
     software-properties-common -y
     
-wget -c https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/docker-ce_18.06.3~ce~3-0~debian_amd64.deb
-dpkg -i docker-ce_18.06.3~ce~3-0~debian_amd64.deb
-rm -r docker-ce_18.06.3~ce~3-0~debian_amd64.deb
-sudo apt update
-systemctl start docker
-systemctl enable docker
-sudo usermod -aG docker $USER
-docker run hello-world
+apt update
+apt -y install curl gnupg2 apt-transport-https software-properties-common ca-certificates
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+echo "deb [arch=amd64] https://download.docker.com/linux/debian buster stable" | sudo tee  /etc/apt/sources.list.d/docker.list
+apt install docker-ce docker-ce-cli containerd.io
+groupadd docker
+usermod -aG docker $USER
+newgrp docker 
 
 
