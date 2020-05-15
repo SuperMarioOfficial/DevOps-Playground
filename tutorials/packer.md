@@ -30,6 +30,12 @@ Packer/
 certutil -hashfile k-osint.iso SHA1
 certutil -hashfile VBoxGuestAdditions.iso SHA256
 ```
+
+## find SHA on Linux 
+```
+sha[TAB]
+sha1sum    sha224sum  sha256sum  sha384sum  sha512sum  shasum
+```
 #### boot_command:
 - ```/install/vmlinuz noapic``` it tells the [kernel](https://www.kernel.org/doc/html/v4.14/admin-guide/kernel-parameters.html) to not make use of any [IOAPICs](https://wiki.osdev.org/IOAPIC) that may be present in the system.
 #### provisioners:
