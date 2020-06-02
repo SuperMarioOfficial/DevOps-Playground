@@ -1,0 +1,80 @@
+{
+  "variables": {
+    "vm_name": "kali2020",
+    "disk_size": "80000",
+    "iso_checksum": "611476f7d432e737478631857beb2b49c688c776f8da20b8da56c5151722811f",
+    "iso_checksum_type": "sha256",
+    "iso_url": "kali-linux-2020.1b-live-amd64.iso",
+    "box_name" : "kali2020", 
+    "ssh_username": "mindwarelab",
+    "ssh_password": "mindwarelab", 
+    "box_desc" : "Kali 2020, thanks to mindwarelab"
+
+  },
+  "description": "{{user `box_desc`}}",
+  "builders": [
+	{ 
+      "headless": false,
+      "type": "virtualbox-iso",
+      "virtualbox_version_file": ".vbox_version",
+      "guest_os_type": "Debian_64",
+      "vm_name": "{{user `vm_name`}}",
+      "iso_url": "{{user `iso_url`}}",
+      "iso_checksum": "{{user `iso_checksum`}}",
+      "iso_checksum_type": "{{user `iso_checksum_type`}}",
+      "disk_size": "{{user `disk_size`}}",
+      "http_directory": "http",
+      "shutdown_command": "echo '{{user `ssh_password`}}' | sudo -S /sbin/shutdown -hP now",
+      "communicator": "ssh",
+      "ssh_username": "{{user `ssh_password`}}",
+      "ssh_password": "{{user `ssh_password`}}",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "90m",
+      "guest_additions_mode": "disable",
+      "vboxmanage": [
+        ["modifyvm","{{.Name}}","--memory","8000"],
+	["modifyvm","{{.Name}}","--vram","128"],
+        ["modifyvm","{{.Name}}","--cpus","4"], 
+	["modifyvm","{{.Name}}","--audio","none"], 
+	["modifyvm","{{.Name}}", "--nic1", "nat"],
+	["modifyvm", "{{.Name}}", "--accelerate3d", "on"],
+        ["modifyvm", "{{.Name}}", "--usb", "on"],
+        ["modifyvm", "{{.Name}}", "--graphicscontroller", "vmsvga"],
+	["modifyvm", "{{.Name}}", "--clipboard-mode", "bidirectional"],
+        ["modifyvm", "{{.Name}}", "--draganddrop", "bidirectional"],
+	["sharedfolder","add", "{{.Name}}", "--name", "Tube", "--hostpath", "C:\\", "--automount"]
+	],
+
+	"boot_wait": "5s",
+        "boot_command": [ 
+         "<esc><wait>",
+        "/install/vmlinuz noapic ",
+        "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg ",
+        "hostname={{ .Name }} ",
+        "auto=true ",
+        "interface=auto ",
+        "domain=vm ",
+        "initrd=/install/initrd.gz -- <enter>"
+      ]
+
+    }
+],
+   "provisioners": [
+    		{
+      "type": "shell",
+      "execute_command": "echo '{{user `ssh_password`}}' | {{ .Vars }} sudo -S -E sh -eux '{{ .Path }}'",
+      "scripts": ["{{template_dir}}/scripts/cleanup.sh"],
+      "expect_disconnect": true
+      }],
+
+   "post-processors": [
+    {
+	
+      	"type": "vagrant",
+  	"output": "kalicore-{{.Provider}}.box",
+        "compression_level":9,
+	"keep_input_artifact": true
+    }
+  ]
+
+}
